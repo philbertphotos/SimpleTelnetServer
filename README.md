@@ -1,4 +1,4 @@
-# Simple TelnetServer C#
+# Simple Telnet Server in C-Sharp
 
 This is a simple Telnet server that I created that is RFC854 compliant (needs some work)
 I created this because I could not find any decent Telnet Server sources out there usally only bits and peices that did not work
