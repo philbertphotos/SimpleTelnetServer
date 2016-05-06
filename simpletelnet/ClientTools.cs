@@ -15,7 +15,7 @@ namespace Telnet.UI
 		public string password = "password";
 		public List<byte> ClientBuf;
 
-		static Color colors = new Color();
+		Color colors = new Color();
 
 		private struct Codes
 		{
