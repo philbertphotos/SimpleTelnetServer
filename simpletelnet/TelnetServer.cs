@@ -3,7 +3,6 @@ using System.IO;
 using System.Net;
 using System.Text;
 using System.Linq;
-using Command.Shell;
 using System.Threading;
 using System.Net.Sockets;
 using System.Collections;
@@ -161,9 +160,7 @@ namespace Telnet.UI
 				Screen.TryAdd(tid, new[]{ 0, 0 });
 				Connected.TryAdd(tid, true);
 			
-				var input = new InputCommand();
-				var display = new Display();
-				TelnetShell.StartCmd(input, display);	
+				TelnetShell.StartCmd();	
 			}
 		}
 	}
