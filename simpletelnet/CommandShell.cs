@@ -28,8 +28,8 @@ namespace Telnet.UI
 {
 	internal static class TelnetShell
 	{
-		Tools tools = new Tools();
-		Color colors = new Color();
+		static Tools tools = new Tools();
+		static Color colors = new Color();
 		
 		public static void StartCmd()
 		{
@@ -248,12 +248,14 @@ namespace Telnet.UI
 									break;
 							}
 						}
-                        }
+                  
 						tools.ScanBuffer(buffer);
 						command = string.Empty;
 
 					} catch (Exception ex) {
 						Logger.Log("Error: " + ex.Message);
+						TelnetServer.tcpStream[tid].Close();
+						TelnetServer.Connected[tid] = false;
 					}
 					firstconnect = false;
 				}//ENDWHILE
