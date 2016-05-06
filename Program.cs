@@ -1,4 +1,4 @@
-﻿#region Copyright (c) 2016 jphilbert
+#region Copyright (c) 2016 jphilbert
 //
 // (C) Copyright 2016 jphilbert
 // TIME: 11:33 AM
@@ -15,6 +15,7 @@
 // jphilbert, its employees, contractors or agents.
 // A23B4ECD-01F5-4FEE-8714-F77E21C9B2D2 5.1.0.5134-RC
 #endregion
+
 using System;
 using Telnet.UI;
 using System.Net;
@@ -25,12 +26,8 @@ namespace SimpleTelnetServer_master
 	{
 		public static void Main(string[] args)
 		{
-			TelnetServer service = new TelnetServer(IPAddress.Any, 23);
-			
 			// TODO: Implement Functionality Here
-			
-			Console.Write("Press any key to continue . . . ");
-			Console.ReadKey(true);
+			TelnetServer service = new TelnetServer(IPAddress.Any, 23);
 		}
 	}
 }
