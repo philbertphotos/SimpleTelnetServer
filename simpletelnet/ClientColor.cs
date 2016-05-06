@@ -1,13 +1,12 @@
 using System;
 using System.Linq;
-using System.Threading;
 
 namespace Telnet.UI
 {
     public class Color
     {
-    	public Tools tools = new Tools();
-        public void reset_color()//Reset Color
+    	public static Tools tools = new Tools();
+        public void reset_color() //Reset Color
         {
           tools.writebytes(new byte[] { 0x1b, (byte)'[', (byte)'m' });
         }
